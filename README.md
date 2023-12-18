@@ -1,3 +1,7 @@
+```
+Name: Siranjeevi.S
+Reg no: 23012822
+```
 # Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
 
 # Implementation-of-Half-Adder-and-Full-Adder-circuit
@@ -34,21 +38,62 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
-### 
-Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
-
-### Output:
-### RTL
-### TIMING DIAGRAM
-
+### Program:
+## Half Adder 
+```
+module halfadder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b)
+endmodule
+```
+## Full Adder
+```
+module halfadder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+xor(sum,a,b,c);
+assign carry=a&b | b&c | a&c
+endmodule
+```
 
 ### TRUTH TABLE 
 
+Half Adder Circuit
+
+
+![ex-3 half table](https://github.com/siranjeevi10/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152168132/99b3ba41-2a83-4990-81da-61e092e685bf)
+
+
+Full Adder Circuit
+
+
+![ex-3 full table](https://github.com/siranjeevi10/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152168132/81901c23-f5a5-40e1-ad5d-4f2453186519)
+
+
+### RTL
+
+Half Adder Circuit
+
+
+![ex-3 half RTL](https://github.com/siranjeevi10/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152168132/227aef0c-9471-4fba-a484-92e390925ac4)
+
+
+Full Adder Circuit
+
+![ex-3 full RTL](https://github.com/siranjeevi10/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152168132/0d59c8b2-6c5c-4239-8cdb-dabdac9af240)
+
+### Output:
+
+Half Adder Circuit
+
+![ex-3 half diagram](https://github.com/siranjeevi10/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152168132/6cb7ab77-2c0c-406d-a7bb-e0457e39ba05)
+
+
+Full Adder Circuit
+
+![ex-3 full diagram](https://github.com/siranjeevi10/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152168132/8492bd54-3e49-44b4-8c37-37a7672e7283)
+
 ### Result:
+To design a half adder and full adder circuit and verify its truth table in Quartus using Verilog programming.
